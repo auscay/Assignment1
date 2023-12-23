@@ -1,0 +1,181 @@
+/* Common styles for all screens */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #191919;
+}
+
+/* Navigation bar section */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f9004d;
+  }
+  
+ nav ul li {
+    float: left;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: #f9004d;
+  }
+  
+
+/* Personal details section */
+#personal-details {
+    width: 100%;
+    padding: 78px 0px; 
+}
+
+#personal-details img {
+    height: auto;
+    width: 420px;
+}
+
+.about-me {
+    width: 100%; /* Adjust width for smaller screens */
+}
+
+.main {
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-me h1,
+.about-me h5,
+.about-me p {
+    text-align: center; /* Center text on smaller screens */
+}
+
+.about-me h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.about-me h5 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+span {
+    color: #f9004d;
+}
+
+.about-me p {
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    #personal-details img {
+        width: 100%; /* Make the image full-width on smaller screens */
+    }
+    .main {
+        flex-direction: column; /* Stack items vertically */
+    }
+}
+
+/* Reasons for joining AltSchool */
+.reason-heading {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+.sub-heading {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+#list-heading {
+    color: #f9004d;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#list-paragraph {
+    color: #ddd;
+    text-align: center;
+}
+
+.list-one, .list-two, .list-three, .list-four {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: movement 5s ease-in-out 2s infinite normal; /* Animation properties */
+}
+
+/* Styles for large screens (min-width: 768px) */
+@media screen and (min-width: 768px) {
+    .list-one,
+    .list-two,
+    .list-three,
+    .list-four {
+        width: 25%; /* Adjust the width as needed */
+        display: inline-block;
+        margin-right: 15%; /* Adjust the margin as needed */
+        margin-left: 5%;
+        list-style: none;
+    }
+
+}
+
+/* Keyframes for the movement animation */
+@keyframes movement {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        left:200px;
+        top:200px;
+    }
+    75% {
+        left:0px;
+        top:200px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
+}
